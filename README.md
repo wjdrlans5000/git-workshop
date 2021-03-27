@@ -6,6 +6,13 @@ git 사용 실습
 2. [점심](lunch.md)
 3. [저녁](dinner.md)
 
+# git 레포지토리 연결 및 커밋 push 순서
+- git init
+- git add README.md
+- git commit -m "first commit"
+- git branch -M main
+- git remote add origin https://github.com/wjdrlans5000/SpringBootStudy.git
+- git push -u origin main
 
 상세 메뉴를 보시려면 각 항목을 클릭해주세요.
 
