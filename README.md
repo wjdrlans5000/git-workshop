@@ -12,7 +12,7 @@ git 사용 실습
 # git 레포지토리 연결 
 - git clone [리포지토리] : 저장소 복제
 - git init
-- git remote reactLearn [url]
+- git remote add reactLearn [url]
 - git remote -v
 - git pull remote reactLearn master(branch)
 - git add [파일명] : 수정or추가된 부분 stage에 올리기
