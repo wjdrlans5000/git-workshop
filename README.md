@@ -41,5 +41,31 @@ git 사용 실습
 - git commit -m "commit 내용"
 - git push -u reactLearn gimun
 
+# fork 한 repository 최신으로 동기화하기
+- Fork 해온 repository 에서 remote repository 를 확인하면 아래와 같이 나올 것이다.
+```git
+$ git remote -v
+origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+```
+- 동기화해오고 싶은 원본 repository 를 upstream 이라는 이름으로 추가한다.
+```git
+git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+```
+- upstream repository 가 제대로 추가 되었는지 확인한다. git remote -v
+- Git 의 fetch 명령어를 통해 upstream repository 의 내용을 불러온다.
+```git
+$ git fetch upstream
+```
+- upstream repository 의 master branch (혹은 원하는 branch) 로부터 나의 local master branch 로 merge 한다.
+```git
+$ git checkout master
+
+$ git merge upstream/master
+```
+- 이 과정까지는 local repository 에서 일어난 것이므로 push 를 통해 remote repository 에도 적용시켜준다
+```git
+$ git push origin master
+```
 
 
